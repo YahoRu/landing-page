@@ -5,13 +5,11 @@
   box-sizing: border-box;
 }
 
-/* Убираем внутренние отступы */
 ul[class],
 ol[class] {
   padding: 0;
 }
 
-/* Убираем внешние отступы */
 body,
 h1,
 h2,
@@ -29,7 +27,6 @@ dd {
   margin: 0;
 }
 
-/* Выставляем основные настройки по-умолчанию для body */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -37,29 +34,24 @@ body {
   line-height: 1.5;
 }
 
-/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
 ul[class],
 ol[class] {
   list-style: none;
 }
 
-/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
 a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-/* Упрощаем работу с изображениями */
 img {
   max-width: 100%;
   display: block;
 }
 
-/* Указываем понятную периодичность в потоке данных у article*/
 article > * + * {
   margin-top: 1em;
 }
 
-/* Наследуем шрифты для инпутов и кнопок */
 input,
 button,
 textarea,
@@ -67,7 +59,7 @@ select {
   font: inherit;
 }
 
-/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -196,6 +188,14 @@ header {
   background-color: #353B40;
 }
 
+footer {
+  height: 80px;
+  width: 100vw;
+  padding: 30px 0;
+  text-align: center;
+  background-color: aqua;
+}
+
 ul {
   display: flex;
   gap: 25px;
@@ -218,12 +218,29 @@ button {
   background-color: rgb(161, 28, 28);
  }
 
+ .music-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
+
+ .music-helper {
+  padding-left: 12px;
+  font-weight: 700;
+  color: cadetblue;
+ }
+
 .header-logo {
   padding: 2px;
   width: 50px;
   border-radius: 10%;
   background-color: #6e7172;
-  box-shadow: 5px 5px 4px ;
+  box-shadow: 0 0 4px 2px;
+}
+
+.header-logo:active {
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, .5);
+  transform:scale(1.2);
 }
 
 .header-links {
@@ -236,7 +253,7 @@ button {
   justify-content: space-evenly;
   flex: 1;
   min-height: calc(100dvh - 70px);
-  min-width: 100vh;
+  min-width: 100vw;
   width: auto;
 }
 
@@ -266,18 +283,17 @@ button {
 .product-types {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   text-align: center;
-  padding-top: 80px;
   gap: 100px;
   min-height: 100vh;
-  min-width: 100vh;
+  min-width: 100vw;
 }
 
 .product-types-wrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 0 10vh;
 }
 
@@ -341,3 +357,74 @@ button {
   opacity: 0;
 }
 
+.third-screen {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-image: url('/landing-page/images/thor-third-screen.jpg');
+  background-size: cover;
+}
+
+.third-screen-container {
+  width: 500px;
+  height: 200px;
+  margin: 10% 0 0 15%;
+  padding: 50px;
+  background-color: rgb(0, 0, 0, 0.5);
+  border-radius: 15px;
+  box-shadow: 0 0 15px;
+}
+
+.thor-quote {
+  color: rgba(245, 222, 179, 0.6);
+  opacity: unset;
+}
+
+.quote-author {
+  text-align: end;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 26px;
+  font-weight: 700;;
+}
+
+.fourth-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.invite-registration {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 200px;
+  width: 1200px;
+  padding: 30px 60px;
+  background-color: #353B40;
+  border-radius: 20px;
+}
+
+.invite-header {
+  font-size: 32px;
+  line-height: 1.4em;
+  color: white;
+}
+
+.invite-text {
+  font-size: 18px;
+  line-height: 1.4em;
+  color: rgb(190, 190, 190);
+}
+
+.register {
+  display: flex;
+  flex-basis: 200px;
+  justify-content: center;
+  align-items: center;
+  text-transform: lowercase;
+  font-size: 14px;
+  max-width: 140px;
+  max-height: 40px;
+  color: rgb(81, 255, 50);
+}

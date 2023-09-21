@@ -4,15 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <bgsound volume="-100000"></bgsound>
     <link rel="stylesheet" href="/landing-page/style.css" />
   </head>
   <body>
     <header>
-      <img
-        class="header-logo"
-        src="/landing-page/images/icons/thor-mjolnir-svgrepo-com.svg"
-        alt="mjolnir-logo"
-      />
+      <div class="music-icon">
+        <img
+          class="header-logo"
+          src="/landing-page/images/icons/thor-mjolnir-svgrepo-com.svg"
+          alt="mjolnir-logo"
+          onClick="togglePlay()"
+        />
+
+        <p class="music-helper">← Music switcher!</p>
+        <audio
+          id="audio"
+          src="/landing-page/music/ac-dc-thunderstruck.mp3"
+          autoplay
+        ></audio>
+      </div>
       <ul class="header-links">
         <li><a href="#">Shop</a></li>
         <li><a href="#">My Cart</a></li>
@@ -84,5 +95,39 @@
         </div>
       </div>
     </section>
+
+    <section class="third-screen">
+      <div class="third-screen-container">
+        <h2 class="thor-quote">
+          <em> "I'd rather be a good man than a great King" </em>
+        </h2>
+        <p class="quote-author">- Thor, son of Odin.</p>
+      </div>
+    </section>
+
+    <section class="fourth-screen">
+      <div class="invite-registration">
+        <div class="invite-text">
+          <h2 class="invite-header">Join the best community of all time!</h2>
+          <p class="invite-text">
+            Become part of something bigger - Thor's community unites beings
+            from different universes, galaxies and astral planes. Share your
+            experience, get advice, learn new things and just have fun!
+          </p>
+        </div>
+        <button class="register">Sign up</button>
+      </div>
+    </section>
+    <footer>
+      <h3 class="footer-copyright">Copyright The Thor Project 2023</h3>
+    </footer>
   </body>
+  <script>
+    const audio = document.querySelector("#audio");
+
+    function togglePlay() {
+      audio.volume = 0.6;
+      return audio.paused ? audio.play() : audio.pause();
+    }
+  </script>
 </html>
