@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <bgsound volume="-100000"></bgsound>
+    <link rel="stylesheet" href="/landing-page/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="music-icon">
+        <img
+          class="header-logo"
+          src="/landing-page/images/icons/thor-mjolnir-svgrepo-com.svg"
+          alt="mjolnir-logo"
+          onClick="togglePlay()"
+        />
+
+        <p class="music-helper">← Music switcher!</p>
+        <audio
+          id="audio"
+          src="/landing-page/music/ac-dc-thunderstruck.mp3"
+          autoplay
+        ></audio>
+      </div>
+      <ul class="header-links">
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">My Cart</a></li>
+        <li><a href="#">My Account</a></li>
+      </ul>
+    </header>
+
+    <section class="welcome-page">
+      <img
+        class="welcome-page-image"
+        src="/landing-page/images/thor.png"
+        alt="thor-image"
+      />
+      <div class="welcome-page-phrase">
+        <h1>Thor, God of Thunder:</h1>
+        <em>
+          "Hey mortal! If you want to touch the divine power, then you have come
+          to the right place. Real discounts for you, btw."
+        </em>
+        <button>Buy now</button>
+      </div>
+    </section>
+
+    <section class="product-types">
+      <h2 class="product-type-header">Decide what you want:</h2>
+      <div class="product-types-wrapper">
+        <div class="product">
+          <div class="product-type-container">
+            <img src="/landing-page/images/thor-weapon.jpg" alt="thor weapon" />
+          </div>
+          <h3 class="product-title">Weapon</h3>
+          <p class="product-description">
+            Strongest weapons in the galaxy! Come to look closer!
+          </p>
+        </div>
+
+        <div class="product">
+          <div class="product-type-container">
+            <img src="/landing-page/images/equip-thor.jpg" alt="loki mask" />
+          </div>
+          <h3 class="product-title">Equipment</h3>
+          <p class="product-description">
+            For dungeons, for adventures, for serious challenges - the best
+            equipment!
+          </p>
+        </div>
+
+        <div class="product">
+          <div class="product-type-container">
+            <img src="/landing-page/images/artifact.jpg" alt="thor artifact" />
+          </div>
+          <h3 class="product-title">Artifacts</h3>
+          <p class="product-description">
+            For those for whom ordinary things are not enough.
+          </p>
+        </div>
+
+        <div class="product">
+          <div class="product-type-container">
+            <img
+              src="/landing-page/images/thor-collection.jpg"
+              alt="thor collection poster"
+            />
+          </div>
+          <h3 class="product-title">Collection</h3>
+          <p class="product-description">
+            Thor's personal brand - the highest quality and brand loyalty!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="third-screen">
+      <div class="third-screen-container">
+        <h2 class="thor-quote">
+          <em> "I'd rather be a good man than a great King" </em>
+        </h2>
+        <p class="quote-author">- Thor, son of Odin.</p>
+      </div>
+    </section>
+
+    <section class="fourth-screen">
+      <div class="invite-registration">
+        <div class="invite-text">
+          <h2 class="invite-header">Join the best community of all time!</h2>
+          <p class="invite-text">
+            Become part of something bigger - Thor's community unites beings
+            from different universes, galaxies and astral planes. Share your
+            experience, get advice, learn new things and just have fun!
+          </p>
+        </div>
+        <button class="register">Sign up</button>
+      </div>
+    </section>
+    <footer>
+      <h3 class="footer-copyright">Copyright The Thor Project 2023</h3>
+    </footer>
+  </body>
+  <script>
+    const audio = document.querySelector("#audio");
+
+    function togglePlay() {
+      audio.volume = 0.6;
+      return audio.paused ? audio.play() : audio.pause();
+    }
+  </script>
+</html>
